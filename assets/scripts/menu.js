@@ -19,4 +19,9 @@ function changeMenuIcon(){
     }
 }
 
-addEventListener('resize',changeMenuIcon)
+addEventListener('resize', () => {
+    changeMenuIcon()
+    if(window.innerWidth>768){
+        menu.classList.remove('show')
+    }
+})
